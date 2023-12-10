@@ -16,6 +16,7 @@ def printAddFive(num):
 
 result = comb.tap(printAddFive, 10)
 print(result)
+
 # > 15
 # > 10
 ```
@@ -36,6 +37,7 @@ def isOdd(num):
 
 alt = comb.alternation(isBiggerThan10, isOdd)
 print(alt(5))
+
 #> Odd number
 ```
 
@@ -53,6 +55,7 @@ def sleep(name):
 
 oneDay = comb.sequence(wakeup, enjoy, sleep)
 oneDay('I')
+
 #> I wake up.
 #> I enjoy.
 #> I sleep.
@@ -73,6 +76,7 @@ def right(value):
 fork = comb.fork(join, left, right)
 result = fork('side')
 print(result)
+
 # result -> left side and right side joined.
 ```
 
