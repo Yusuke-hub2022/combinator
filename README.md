@@ -2,22 +2,6 @@
 
 Function combinator in Python.
 
-## Sample
-
-```python
-from pipe import pipe
-
-def add1(n):
-    return n + 1
-
-def add2(n):
-    return n + 2
-
-someAdd = pipe(add1, add2)
-result = someAdd(0)
-# result -> 3
-```
-
 ## import
 
 ```python
