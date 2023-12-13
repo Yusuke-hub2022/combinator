@@ -1,12 +1,38 @@
 # combinator-in-python
 
-Function combinator in Python.
+Function combinators in Python.
+Includes compose, pipe, tap, alternation, sequence and fork.
 
 ## import
 
 ```python
 import combinator as comb
 ```
+
+## compose and pipe
+
+```python
+def add1(x):
+    return x + 1
+
+def times10(x):
+    return x * 10
+
+# compose
+times10_add1 = comb.compose(add1, times10)
+result = times10_add1(5)
+print(result)
+
+# > 51
+
+# pipe
+add1_times10 = comb.pipe(add1, times10)
+result = add1_times10(5)
+print(result)
+
+# > 60
+```
+
 
 ## tap
 
