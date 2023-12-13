@@ -1,3 +1,25 @@
+def doAll(which):
+    def opositOrder(fns):
+        fns.reverse()
+        return fns
+
+    def planeOrder(fns):
+        return fns
+
+    sortFuncs = opositOrder if which == 'compose' else planeOrder
+
+    def composeOrPipe(*funcs):
+        funcs = sortFuncs(list(funcs))
+        def callAllFuncs(*args):
+            result = funcs[0](*args)
+            for f in funcs[1:]:
+                result = f(result)
+            return result
+        return callAllFuncs
+    return composeOrPipe
+
+compose = doAll('compose')
+pipe = doAll('pipe')
 
 def identity(arg):
     return arg
