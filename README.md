@@ -41,10 +41,10 @@ def printAddFive(num):
     print(num + 5)
 
 result = comb.tap(printAddFive, 10)
-print(result)
-
 # > 15
+print(result)
 # > 10
+
 ```
 
 
