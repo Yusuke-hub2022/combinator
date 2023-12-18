@@ -37,11 +37,8 @@ print(result)
 ## tap
 
 ```python
-def printAddFive(num):
-    print(num + 5)
-
-result = comb.tap(printAddFive, 10)
-# > 15
+result = comb.tap(print, 10)
+# > 10
 print(result)
 # > 10
 
